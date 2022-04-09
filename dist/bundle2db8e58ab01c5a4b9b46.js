@@ -1,6 +1,88 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/scripts/animated_text.js":
+/*!**************************************!*\
+  !*** ./src/scripts/animated_text.js ***!
+  \**************************************/
+/***/ (() => {
+
+// ----------------- Header animation -----------------
+var words = ["develop apps", "shape Metaverse", "design in 3D", "build websites", "create things"];
+var cursor = gsap.to('.cursor', {
+  opacity: 0,
+  ease: "power2.inOut",
+  repeat: -1
+});
+var masterTL = gsap.timeline({
+  repeat: -1
+});
+words.forEach(function (word) {
+  var tl = gsap.timeline({
+    repeat: 1,
+    yoyo: true,
+    repeatDelay: 2
+  });
+  tl.to('.text', {
+    duration: 1,
+    text: word
+  });
+  masterTL.add(tl);
+}); // // ----------------- Text animation -----------------
+// const textReveal = gsap.timeline()
+// textReveal.from(".line", 1.8, {
+//     y: 100, ease: "power4.out", delay: 1, skewY: 10, stagger: {
+//         amount: 0.4
+//     }
+// })
+
+/***/ }),
+
+/***/ "./src/scripts/menu.js":
+/*!*****************************!*\
+  !*** ./src/scripts/menu.js ***!
+  \*****************************/
+/***/ (() => {
+
+var hamburgerMenu = document.querySelector('.open-menu');
+var navContent = document.querySelector('#nav-content');
+var closeNavContent = document.querySelector('#nav-content');
+hamburgerMenu.addEventListener('click', function () {
+  navContent.classList.add('show');
+  document.body.style.overflow = "hidden";
+});
+closeNavContent.addEventListener('click', function () {
+  navContent.classList.remove('show');
+  document.body.style.overflow = "auto";
+});
+
+/***/ }),
+
+/***/ "./src/scripts/progress_bar.js":
+/*!*************************************!*\
+  !*** ./src/scripts/progress_bar.js ***!
+  \*************************************/
+/***/ (() => {
+
+// Progress bar
+var progressSection = document.querySelector('.progressSection');
+var progressBar = document.querySelector('.progressBar');
+var progressNum = document.querySelector('.progressNum');
+var x, y;
+
+function updateProgressBar() {
+  progressBar.style.height = "".concat(getScrollPercentage(), "%");
+  progressNum.innerText = "".concat(Math.ceil(getScrollPercentage()), "%");
+  requestAnimationFrame(updateProgressBar);
+}
+
+function getScrollPercentage() {
+  return window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
+}
+
+updateProgressBar();
+
+/***/ }),
 
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/main.scss":
 /*!***********************************************************************************************************!*\
@@ -8,6 +90,7 @@
   \***********************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -57,6 +140,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n  font-family: \"Expansi
   \*****************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /*
@@ -168,6 +252,7 @@ module.exports = function (cssWithMappingToString) {
   \********************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 module.exports = function (url, options) {
@@ -206,6 +291,7 @@ module.exports = function (url, options) {
   \************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 module.exports = function (item) {
@@ -237,6 +323,7 @@ module.exports = function (item) {
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -291,6 +378,7 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
   \****************************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 var stylesInDOM = [];
@@ -404,6 +492,7 @@ module.exports = function (list, options) {
   \********************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 var memo = {};
@@ -452,6 +541,7 @@ module.exports = insertBySelector;
   \**********************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -472,6 +562,7 @@ module.exports = insertStyleElement;
   \**********************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -493,6 +584,7 @@ module.exports = setAttributesWithoutAttributes;
   \***************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -572,6 +664,7 @@ module.exports = domAPI;
   \*********************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -597,6 +690,7 @@ module.exports = styleTagTransform;
   \******************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "Arkitech-Light.ttf";
 
 /***/ }),
@@ -607,6 +701,7 @@ module.exports = __webpack_require__.p + "Arkitech-Light.ttf";
   \*******************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "Arkitech-Medium.ttf";
 
 /***/ }),
@@ -617,6 +712,7 @@ module.exports = __webpack_require__.p + "Arkitech-Medium.ttf";
   \*******************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "Expansiva-bold.otf";
 
 /***/ }),
@@ -627,6 +723,7 @@ module.exports = __webpack_require__.p + "Expansiva-bold.otf";
   \**************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "Expansiva.otf";
 
 /***/ }),
@@ -637,6 +734,7 @@ module.exports = __webpack_require__.p + "Expansiva.otf";
   \*************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "About.svg";
 
 /***/ }),
@@ -647,6 +745,7 @@ module.exports = __webpack_require__.p + "About.svg";
   \***********************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "Lab.svg";
 
 /***/ }),
@@ -657,6 +756,7 @@ module.exports = __webpack_require__.p + "Lab.svg";
   \******************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "PiotrBania.svg";
 
 /***/ }),
@@ -667,6 +767,7 @@ module.exports = __webpack_require__.p + "PiotrBania.svg";
   \*****************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "Portfolio.svg";
 
 /***/ }),
@@ -677,6 +778,7 @@ module.exports = __webpack_require__.p + "Portfolio.svg";
   \**************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "Skills.svg";
 
 /***/ }),
@@ -687,7 +789,41 @@ module.exports = __webpack_require__.p + "Skills.svg";
   \***************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "contact.svg";
+
+/***/ }),
+
+/***/ "./src/assets/images/icons/menu-closed.svg":
+/*!*************************************************!*\
+  !*** ./src/assets/images/icons/menu-closed.svg ***!
+  \*************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "menu-closed.svg";
+
+/***/ }),
+
+/***/ "./src/assets/images/icons/menu-open.svg":
+/*!***********************************************!*\
+  !*** ./src/assets/images/icons/menu-open.svg ***!
+  \***********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "menu-open.svg";
+
+/***/ }),
+
+/***/ "./src/assets/images/logo/PB logo.svg":
+/*!********************************************!*\
+  !*** ./src/assets/images/logo/PB logo.svg ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "PB logo.svg";
 
 /***/ })
 
@@ -821,17 +957,39 @@ module.exports = __webpack_require__.p + "contact.svg";
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
+"use strict";
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
+/* harmony import */ var _scripts_animated_text__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scripts/animated_text */ "./src/scripts/animated_text.js");
+/* harmony import */ var _scripts_animated_text__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_scripts_animated_text__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _scripts_menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scripts/menu */ "./src/scripts/menu.js");
+/* harmony import */ var _scripts_menu__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_scripts_menu__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _scripts_progress_bar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./scripts/progress_bar */ "./src/scripts/progress_bar.js");
+/* harmony import */ var _scripts_progress_bar__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_scripts_progress_bar__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _assets_images_logo_PB_logo_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/images/logo/PB logo.svg */ "./src/assets/images/logo/PB logo.svg");
+/* harmony import */ var _assets_images_icons_menu_closed_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/images/icons/menu-closed.svg */ "./src/assets/images/icons/menu-closed.svg");
+/* harmony import */ var _assets_images_icons_menu_open_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/images/icons/menu-open.svg */ "./src/assets/images/icons/menu-open.svg");
 
 
+
+
+
+
+var logoPB = document.getElementById('logo');
+logoPB.src = _assets_images_logo_PB_logo_svg__WEBPACK_IMPORTED_MODULE_4__;
+
+var open_menu = document.getElementById('open-menu');
+open_menu.src = _assets_images_icons_menu_closed_svg__WEBPACK_IMPORTED_MODULE_5__;
+
+var close_menu = document.getElementById('closed-menu');
+close_menu.src = _assets_images_icons_menu_open_svg__WEBPACK_IMPORTED_MODULE_6__;
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle58d638c3e9d91ce55c0d.js.map
+//# sourceMappingURL=bundle2db8e58ab01c5a4b9b46.js.map
