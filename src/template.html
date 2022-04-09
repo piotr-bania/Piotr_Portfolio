@@ -9,7 +9,7 @@
     <title><%= htmlWebpackPlugin.options.title %>></title>
 
     <!-- Favicon -->
-    <!-- <link rel="shortcut icon" href="/src/assets/images/logo/PB logo.svg" type="image/x-icon"> -->
+    <link rel="shortcut icon" href="./assets/images/logo/PB logo.svg" type="image/x-icon">
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/ifq5vfd.css">
@@ -43,7 +43,7 @@
 
     <div class="header">
         <div>
-            <a href="#section-a"><img id="logoPB" class="logo" alt="logo"></a>
+            <a href="#section-a"><img class="logo" src="/src/assets/images/logo/PB logo.svg" alt="logo"></a>
         </div>
 
         <div class="menu">
@@ -58,6 +58,58 @@
             <a href="#"><button>Resume</button></a>
         </div>
     </div>
+
+    <div class="open-menu">
+        <img src="/src/assets/images/icons/menu-closed.svg" alt="closed menu">
+    </div>
+
+    <div id="nav-content">
+        <div class="closed-menu">
+            <img src="/src/assets/images/icons/menu-open.svg" alt="">
+        </div>
+
+        <div class="wrapper">
+            <h2 class="section-heading">Menu</h2>
+            <nav>
+                <ul>
+                    <li><a href="#section-a">Home</a></li>
+                    <li><a href="#section-b">Portfolio</a></li>
+                    <li><a href="#section-c">Lab</a></li>
+                    <li><a href="#section-d">Skills</a></li>
+                    <li><a href="#section-e">About</a></li>
+                    <li><a href="#section-f">Contact</a></li>
+                </ul>
+            </nav>
+            <br>
+            <a href="#"><button>Resume</button></a>
+        </div>
+    <div>
+
+        </div>
+    </div>
+
+    <!-- ------------------------------ Hero section ------------------------------ -->
+
+    <section id="section-a">
+        <div class="container">
+            <div class="heroText">
+                <h2 class="upper-heading">
+                    Before <b>May '21</b><br>
+                    I knew nothing
+                </h2>
+                <h1 class="lower-heading">
+                    Today I<br>
+                    <strong>{ </strong>
+                    <span class="text"></span>
+                    <span class="cursor">_</span><strong> }</strong>
+                </h1>
+                <a href="#section-b"><button>Let me show you</button></a>
+            </div>
+        </div>
+        <div>
+            <canvas class="canvas-1"></canvas>
+        </div>
+    </section>
 
 </body>
 

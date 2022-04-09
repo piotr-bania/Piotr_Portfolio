@@ -689,16 +689,6 @@ module.exports = __webpack_require__.p + "Skills.svg";
 
 module.exports = __webpack_require__.p + "contact.svg";
 
-/***/ }),
-
-/***/ "./src/assets/images/logo/PB logo.svg":
-/*!********************************************!*\
-  !*** ./src/assets/images/logo/PB logo.svg ***!
-  \********************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "PB logo.svg";
-
 /***/ })
 
 /******/ 	});
@@ -838,14 +828,10 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
-/* harmony import */ var _assets_images_logo_PB_logo_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/images/logo/PB logo.svg */ "./src/assets/images/logo/PB logo.svg");
 
 
-
-var logoPB = document.getElementById('logoPB');
-logoPB.src = _assets_images_logo_PB_logo_svg__WEBPACK_IMPORTED_MODULE_1__;
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle85eed7d6babdb94414f7.js.map
+//# sourceMappingURL=bundle58d638c3e9d91ce55c0d.js.map
