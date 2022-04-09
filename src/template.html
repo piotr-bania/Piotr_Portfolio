@@ -7,10 +7,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title><%= htmlWebpackPlugin.options.title %>></title>
+
+    <!-- Favicon -->
+    <!-- <link rel="shortcut icon" href="/src/assets/images/logo/PB logo.svg" type="image/x-icon"> -->
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/ifq5vfd.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <h1>Header goes here.</h1>
+
+    <!-- ------------------------------ Progress bar ------------------------------ -->
+
+    <div class="progressSection">
+        <div class="progressBarWrap"></div>
+        <div class="progressBar"></div>
+        <div class="progressNum"></div>
+    </div>
+
+    <!-- ------------------------------ Strips ------------------------------ -->
+
+    <div class="strips">
+        <div class="strip one"></div>
+        <div class="strip two"></div>
+        <div class="strip three"></div>
+    </div>
+
+    <!-- ------------------------------ Sections ------------------------------ -->
+
+    <!-- ------------------------------ Header section ------------------------------ -->
+
+    <div class="header">
+        <div>
+            <a href="#section-a"><img id="logoPB" class="logo" alt="logo"></a>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="#section-a">Home</a></li>
+                <li><a href="#section-b">Portfolio</a></li>
+                <li><a href="#section-c">Lab</a></li>
+                <li><a href="#section-d">Skills</a></li>
+                <li><a href="#section-e">About</a></li>
+                <li><a href="#section-f">Contact</a></li>
+            </ul>
+            <a href="#"><button>Resume</button></a>
+        </div>
+    </div>
+
 </body>
 
 </html>
