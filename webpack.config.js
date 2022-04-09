@@ -18,7 +18,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Webpack App',
+            title: 'Piotr | Folio',
             filename: 'index.html',
             template: 'src/template.html'
         })
